@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoTask from "./components/TodoTask/TodoTask";
+
+import './styles/styles.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	return (
+		<div className="App">
+
+			<header>
+
+				<h2>Lists</h2>
+
+				<input
+					type="text" autoComplete="off" 
+					placeholder="Escrever task..." 
+					name="task"
+					className="input"
+				/>
+
+				<button type="submit" className="btn-header">Adicionar Task</button>
+			</header>
+			
+			<div className="line"></div>
+
+			<TodoTask />
+			
+		</div>
+	);
 }
 
 export default App;
